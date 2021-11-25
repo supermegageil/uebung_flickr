@@ -12,4 +12,125 @@ a {
 body {
   background: #eee; }
 
+#searchBox {
+  width: 100%;
+  padding: 50px 60px 0px;
+  box-sizing: border-box;
+  font-size: 0;
+  overflow: hidden; }
+  #searchBox input[type=text] {
+    width: 300px;
+    height: 30px;
+    background: #fff;
+    border: 1px solid #ddd;
+    padding-left: 10px;
+    box-sizing: border-box; }
+  #searchBox .btnSearch {
+    width: 80px;
+    height: 30px;
+    background: #333;
+    font: bold 12px/28px 'arial';
+    color: #fff;
+    text-align: center;
+    margin-left: 10px;
+    cursor: pointer;
+    border: none;
+    vertical-align: top; }
+
+#wrap {
+  width: 100%;
+  padding: 50px;
+  overflow: hidden; }
+  #wrap .loading {
+    width: 100px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: 1s; }
+    #wrap .loading.off {
+      opacity: 0; }
+  #wrap .errTxt {
+    display: none; }
+  #wrap #list {
+    width: 100%;
+    opacity: 0;
+    transform: translateY(100px);
+    transition: 1s; }
+    #wrap #list.on {
+      opacity: 1;
+      transform: translateY(0px); }
+    #wrap #list::after {
+      content: '';
+      display: block;
+      clear: both; }
+    #wrap #list li {
+      width: calc(100% / 6);
+      float: left;
+      padding: 10px; }
+      #wrap #list li div {
+        width: 100%;
+        background: #fff;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1); }
+        #wrap #list li div a > img {
+          width: 100%; }
+        #wrap #list li div p {
+          font: 12px/1.2 'arial';
+          color: #777;
+          margin-top: 10px;
+          margin-bottom: 10px; }
+        #wrap #list li div span {
+          display: flex;
+          align-items: center;
+          margin-top: 20px; }
+          #wrap #list li div span img {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            margin-right: 5px; }
+          #wrap #list li div span strong {
+            font: 11px/1 'arial';
+            color: orange; }
+
+aside {
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.9);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  padding: 5vw;
+  box-sizing: border-box; }
+  aside .con {
+    width: 100%;
+    height: 100%; }
+    aside .con img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain; }
+  aside .close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: #fff; }
+
+@media screen and (max-width: 1599px) {
+  #wrap #list li {
+    width: calc(100% / 5); } }
+@media screen and (max-width: 1399px) {
+  #wrap #list li {
+    width: calc(100% / 4); } }
+@media screen and (max-width: 999px) {
+  #wrap #list li {
+    width: calc(100% / 3); } }
+@media screen and (max-width: 749px) {
+  #wrap #list li {
+    width: calc(100% / 2); } }
+@media screen and (max-width: 439px) {
+  #wrap #list li {
+    width: calc(100% / 1); } }
+
 /*# sourceMappingURL=style.css.map */
